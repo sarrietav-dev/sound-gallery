@@ -9,7 +9,8 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-import {BUCKET } from '@angular/fire/compat/storage';
+import { BUCKET } from '@angular/fire/compat/storage';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat/';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,10 @@ import {BUCKET } from '@angular/fire/compat/storage';
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [{ provide: BUCKET, useValue: environment.firebase.bucket }],
+  providers: [
+    { provide: BUCKET, useValue: environment.firebase.bucket },
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
