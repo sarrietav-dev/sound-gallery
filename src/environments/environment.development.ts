@@ -8,4 +8,6 @@ export const environment = {
     authDomain: 'sound-gallery-b433a.firebaseapp.com',
     messagingSenderId: '99589144670',
     measurementId: 'G-3MYK89C43L',
-  },};
+    bucket: 'sound-gallery-b433a.appspot.com',
+  },
+};
