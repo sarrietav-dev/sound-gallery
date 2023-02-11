@@ -3,7 +3,10 @@
   "version": 1,
   "cli": {
     "packageManager": "yarn",
-    "analytics": "21773188-7e64-4381-b7c2-15ba98a0e20a"
+    "analytics": "21773188-7e64-4381-b7c2-15ba98a0e20a",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -116,6 +119,15 @@
             "browserTarget": "sound-gallery:build:production",
             "firebaseProject": "sound-gallery-b433a",
             "firebaseHostingSite": "sound-gallery-b433a"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
