@@ -5,11 +5,11 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
   templateUrl: './audio-player.component.html',
 })
 export class AudioPlayerComponent {
-  @Input() title: string = 'Audio Player';
-  @Input() audioNumber: number = 0;
-  @Input() src: string = '';
+  @Input() title = 'Audio Player';
+  @Input() audioNumber = 0;
+  @Input() src = '';
   @ViewChild('player') player!: ElementRef<HTMLAudioElement>;
-  isPlaying: boolean = false;
+  isPlaying = false;
 
   constructor() {}
 
