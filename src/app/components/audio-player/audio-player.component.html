@@ -1,12 +1,20 @@
 <article class="flex rounded shadow">
+  <audio
+    [src]="src"
+    #player
+    (pause)="handlePaused()"
+    (ended)="handleEnded()"
+  ></audio>
   <div class="bg-purple-900 rounded-tl rounded-bl shadow">
     <div class="h-full p-2">
-      <!-- Create a circle -->
       <div
+        (click)="handleClicked()"
         class="w-12 h-12 rounded-full bg-purple-700 flex justify-center items-center"
       >
-        <!-- Get reproduce music icon -->
-        <icon-play></icon-play>
+        <icon-play *ngIf="!this.isPlaying; else pause"></icon-play>
+        <ng-template #pause>
+          <icon-pause></icon-pause>
+        </ng-template>
       </div>
     </div>
   </div>
