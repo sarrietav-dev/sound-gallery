@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sound-gallery-b433a"
+  },
+  "targets": {
+    "sound-gallery-b433a": {
+      "hosting": {
+        "sound-gallery": [
+          "sound-gallery-b433a"
+        ]
+      }
+    }
+  }
+}

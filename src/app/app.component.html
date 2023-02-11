@@ -1,3 +1,7 @@
 <div class="px-10 py-8">
-  <audio-player></audio-player>
+  <audio-player
+    *ngFor="let audio of audios"
+    [title]="audio.title"
+    [src]="audio.url"
+  ></audio-player>
 </div>
