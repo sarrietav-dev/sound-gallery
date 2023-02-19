@@ -12,6 +12,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
 import { BUCKET } from '@angular/fire/compat/storage';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat/';
 import { IndexModule } from './modules/index/index.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { IndexModule } from './modules/index/index.module';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    BrowserAnimationsModule,
   ],
   providers: [
     { provide: BUCKET, useValue: environment.firebase.bucket },
