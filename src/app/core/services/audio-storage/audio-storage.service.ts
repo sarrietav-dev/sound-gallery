@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Audio } from '../../models/Audio';
+import { Audio } from '@core/models/Audio';
 
 import { Observable } from 'rxjs';
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AudioStorageService } from 'src/app/services/audio-storage/audio-storage.service';
-import { Audio } from 'src/app/models/Audio';
+import { AudioStorageService } from '@core/services/audio-storage/audio-storage.service';
+import { Audio } from '@core/models/Audio';
 
 @Component({
   selector: 'app-index-page',
