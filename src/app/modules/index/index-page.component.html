@@ -1,7 +1,15 @@
-<div class="px-10 py-8 flex flex-col gap-5 max-w-3xl mx-auto">
+<div
+  class="px-10 py-8 flex flex-col gap-5 max-w-3xl mx-auto"
+  *ngIf="audios.length > 0; else spinner"
+>
   <audio-player
     *ngFor="let audio of audios"
     [title]="audio.title"
     [src]="audio.url"
   ></audio-player>
 </div>
+<ng-template #spinner>
+  <div class="flex justify-center items-center h-full">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+</ng-template>
